@@ -1,1 +1,1 @@
-alert("The sky is blue")
+alert("The sky is blue and purple and green")
