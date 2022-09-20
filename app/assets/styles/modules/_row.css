@@ -6,8 +6,16 @@
         margin-right: -65px;
     }
 
+    &--gutters-large {
+        margin-right: -100px;
+    }
+
     &--gutters > div {
         padding-right: 65px;
+    }
+
+    &--gutters-large > div {
+        padding-right: 100px;
     }
 
     &__b-margin-until-medium {
@@ -17,7 +25,7 @@
     @mixin atMedium {
 
         &__b-margin-until-medium {
-            margin-bottom: 0rem;
+            margin-bottom: 0;
         }
 
         &__medium-4 {
@@ -26,25 +34,22 @@
         }
 
         &__medium-4--larger {
-            width: 35%;
+            width: 37%;
         }
 
         &__medium-6 {
             float: left;
-            width: 25%,
+            width: 50%;
         }
 
-    
         &__medium-8 {
             float: left;
-            width: 53%;
+            width: 59%;
         }
 
         &__medium-8--smaller {
-            witdh: 65%;
+            witdh: 63%;
         }
-    
-
     }
    
 }
