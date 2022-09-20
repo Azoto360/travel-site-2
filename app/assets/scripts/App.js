@@ -1,1 +1,5 @@
-alert("The sky is blue and purple")
+import '../styles/styles.css'
+
+if (module.hot) {
+  module.hot.accept ()
+}
