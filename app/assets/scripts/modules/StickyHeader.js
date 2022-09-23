@@ -4,6 +4,7 @@ import debounce from 'lodash/debounce'
 class StickyHeader {
   constructor() {
     this.siteHeader = document.querySelector(".site-header")
+    this.menuIcon = document.querySelector('.site-header__menu-icon')
     this.pageSections = document.querySelectorAll(".page-section")
     this.browserHeight = window.innerHeight
     this.previousScrollY = window.scrollY
@@ -21,6 +22,18 @@ class StickyHeader {
     this.determineScrollDirection()
 
     if (window.scrollY > 60) {
+      this.menuIcon.classList.add("site-header__menu-icon")
+    } else {
+      this.menuIcon.classList.remove("site-header__menu-icon")
+    }
+
+    this.pageSections.forEach(el => this.calcSection(el))
+  }
+
+  runOnScroll() {
+    this.determineScrollDirection()
+
+    if (window.scrollY > 100) {
       this.siteHeader.classList.add("site-header--dark")
     } else {
       this.siteHeader.classList.remove("site-header--dark")
@@ -28,6 +41,7 @@ class StickyHeader {
 
     this.pageSections.forEach(el => this.calcSection(el))
   }
+
 
   determineScrollDirection() {
     if (window.scrollY > this.previousScrollY) {
