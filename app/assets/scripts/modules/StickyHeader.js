@@ -18,17 +18,6 @@ class StickyHeader {
     }, 333))
   }
 
-  runOnScroll() {
-    this.determineScrollDirection()
-
-    if (window.scrollY > 60) {
-      this.menuIcon.classList.add("site-header__menu-icon")
-    } else {
-      this.menuIcon.classList.remove("site-header__menu-icon")
-    }
-
-    this.pageSections.forEach(el => this.calcSection(el))
-  }
 
   runOnScroll() {
     this.determineScrollDirection()
