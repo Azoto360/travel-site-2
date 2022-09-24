@@ -5,22 +5,18 @@ exports.handler = function(event, context, callback) {
     `
     let body 
 
-    if(event.body) {
+    if (event.body) {
         body = JSON.parse(event.body)
     } else {}
     }
 
-    if(body.password == "Pizza") {
+    if (body.password == "Pizza") {
         callback(null, {
             statusCode: 200,
         body: secretContent
         })
-    
-
     } else {
         callback(null, {
             statusCode: 401
         })
-    
-
     }
