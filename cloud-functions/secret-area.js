@@ -7,8 +7,10 @@ exports.handler = function(event, context, callback) {
 
     if (event.body) {
         body = JSON.parse(event.body)
-    } else {}
+    } else {
+        body = {}
     }
+    
 
     if (body.password == "Pizza") {
         callback(null, {
@@ -20,3 +22,4 @@ exports.handler = function(event, context, callback) {
             statusCode: 401
         })
     }
+}
