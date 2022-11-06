@@ -1,3 +1,5 @@
+/*
+
 exports.handler = function(event, context, callback) {
     const secretContent = `
     <h3>Welcome To The Secret Area</h3>
@@ -25,3 +27,5 @@ exports.handler = function(event, context, callback) {
   
     
   }
+
+  */
